@@ -1,47 +1,23 @@
----
-layout: default
----
-<header style="background-image: url({{ site.baseurl }}{{ page.featured_image }});">
-  <div class="container post-container">
-    <a href="{{ site.baseurl }}/" class="home_button"></a>
-    <div class="inner-container">
-      <h1>{{ page.title }}</h1>
-      <ul class="meta">
-        <li>
-          <span>
-            Published
-          </span>
-          {{ page.date | date_to_string }}
-        </li>
-        <li>
-          <span>
-            Category
-          </span>
-          {{ page.categories }}
-        </li>
-      </ul>      
-    </div>
-    <ul class="pagination">
-      {% if page.previous.url %}
-        <li class="previous">
-          <a href="{{ site.baseurl }}{{ page.previous.url }}">
-            Previous
-          </a>
-        </li>
-      {% endif %}
-      {% if page.next.url %}
-      <li class="next">
-        <a href="{{ site.baseurl }}{{ page.next.url }}">
-          Next
-        </a>
-      </li>
-      {% endif %}
-    </ul>
-  </div>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+      <div class="jumbotron-post jumbotron-fluid" style="background-image: url({{ page.image-url }})">
+        <div class="post vertical-center">
+          <div class="container-fluid">
+            <div class="card post-card-transparent tall-card">
+              <div class="card-body">
+                <h2 class="font-bolder page-title">{{ page.title }}</h2>
+                <p>{{ page.excerpt }}</p>
+              </div>
+              <div class="card-footer">
+                <a href="/" class="btn btn-lg btn-light stretched-link">Return Home</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<article>
-  <div class="container">
-    {{ content }}
-  </div>
-</article>
+    {% include footer.html %}
+  </body>
+</html>

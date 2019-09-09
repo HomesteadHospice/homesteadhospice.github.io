@@ -1,29 +1,51 @@
 ---
 layout: default
 ---
-<header id="home-header" style="background-image: url({{ site.baseurl }}{{ site.sidebar_image }});">
-  <div class="container">
-    <h1>{{ site.title }}</h1>
-    <ul class="meta">
-      <li>
-        <span>
-          {{ site.tagline }}
-        </span>
-      </li>
+
+<div id="mySidebar" class="sidebar">
+  <div id="listGroup">
+    {% for post in site.posts %}
+    <a href="{{ post.url }}" class="list-group-item list-group-item-action p-4 card-transparent">
+      <h2 class="font-bolder underline">{{ post.title }}</h2>
+      <p>{{ post.excerpt }}</p>
+    </a>
+    {% endfor %}
   </div>
-</header>
-<article>
-  <div class="container">
-    <ul class="posts">
-      {% for post in site.posts %}
-        <li>
-          <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-          <span class="meta">
-            {{ post.date | date_to_string }}
-          </span>
-          {{ post.excerpt }}
-        </li>
-      {% endfor %}
-    </ul>
+</div>
+
+<div class="jumbotron">
+  <div class="container-fluid">
+    <h1 class="text-right">Welcome <span class="font-bolder">Home</span></h1>
+    <p class="lead text-right">The Homestead Story</p>
   </div>
-</article>
+
+  <div id="main">
+    <button id="openButton" class="openbtn float-right btn btn-light btn-lg mr-3" onclick="openNav()">&plus; Learn More</button>
+  </div>
+  <div class="card-container">
+    <div class="collapse" id="collapseExample">
+      <div class="row">
+      <div class="col-5"></div>
+      <div class="col-7">
+      </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  var open = false;
+
+  function openNav() {
+    if (!open){
+      document.getElementById("mySidebar").style.marginRight = "0px";
+      document.getElementById("openButton").textContent = '× Hide Info';
+      open = true
+    } else {
+      document.getElementById("mySidebar").style.marginRight = "-450px";
+      document.getElementById("openButton").textContent = '+ Learn More';
+      open = false;
+    }
+  }
+</script>
