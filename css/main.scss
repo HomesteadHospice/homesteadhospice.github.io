@@ -1,0 +1,161 @@
+---
+---
+
+@import 'bootstrap/bootstrap';
+@import 'custom/variables';
+
+body {
+    font-family: 'Open Sans', serif;
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-family: 'Merriweather';
+    font-size: 6rem;
+    font-weight: 900;
+    color: $primary-text-color;
+}
+
+.font-bolder {
+    font-family: 'Merriweather';
+    font-weight: 900;
+}
+
+.lead {
+    font-weight: bold;
+    font-size: 2rem;
+    color: $primary;
+    padding-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.card-columns {
+    column-count: 2;
+}
+
+.card-columns .card {
+    margin-bottom: 2rem;
+}
+
+.jumbotron {
+    color: black;
+    background-image: url("/images/il_794xN.1098056634_26yg.jpg");
+    filter: blur(5%);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.jumbotron-post {
+    color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.vertical-center {  
+    display: flex;
+    align-items: center;
+}
+
+.card-img-top {
+    max-height: none;
+}
+
+.overlap {
+    margin-left: -10%;
+    z-index: 1;
+}
+
+.card {
+    border: 0;
+    margin-bottom: 40px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-img-home {
+    object-fit: cover;
+    max-height: 300px;
+}
+
+.card-img-post {
+    object-fit: cover;
+    max-height: none;
+}
+
+.card-transparent {
+    background-color: rgba(255, 255, 255, 0.0);
+    color: $primary-text-color;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    border-radius: 0px;
+}
+
+.post-card-transparent {
+    color: $secondary-text-color;
+    background-color: $secondary;
+}
+
+.card-container {
+    margin-top: 80px;
+}
+
+.tall-card {
+    height: 55vh;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.post {
+    height: 100vh;
+    width: 100vw;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.page-title {
+    font-size: 3rem;
+}
+
+.sidebar {
+    margin-right: -450px;
+    height: 86vh;
+    width: 450px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    margin-top: 18vh;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+
+  #openButton {
+      width: 230px;
+  }
+
+  .list-group-item {
+      border: 0;
+  }
+
+  .list-group-item:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+
+  .underline {
+      text-decoration: underline;
+  }
