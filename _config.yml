@@ -1,8 +1,11 @@
 # Site settings
-title: 'Welcome Home' 
-tagline: 'The Homestead Story' # A brief tagline for your site
-sidebar_image: /images/cover.jpg
+title:
+email:
+author:
+description:
+url:
 
 # Build settings
-highlighter: rouge
-baseurl: / # the subpath of your site, e.g. /blog/
+permalink: :title/
+sass:
+  sass_dir: css
